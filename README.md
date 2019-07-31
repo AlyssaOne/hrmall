@@ -1,2 +1,0 @@
-# hrmall
-HR商城
