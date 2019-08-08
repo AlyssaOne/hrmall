@@ -1,2 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_hr_register_hr_register,hr_register.hr_register,model_hr_register_hr_register,,1,0,0,0
