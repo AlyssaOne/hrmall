@@ -1,0 +1,33 @@
+<odoo>
+
+        <record id="list_check_user" model="ir.ui.view">
+      <field name="name">审核</field>
+      <field name="model">res.users</field>
+      <field name="arch" type="xml">
+        <tree editable="bottom">
+          <field name="login"/>
+          <field name="user_type"/>
+          <field name="user_actived"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="form_check_user" model="ir.ui.view">
+      <field name="name">修改用户</field>
+      <field name="model">res.users</field>
+      <field name="priority">20</field>
+      <field name="inherit_id" ref="base.view_users_form"/>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group name="group_top">
+                <field name="login"/>
+                <field name="user_type"/>
+                <field name="user_actived"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+</odoo>

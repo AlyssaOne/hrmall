@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Action -->
+    <!--<act_window id="action_check_user"-->
+      <!--name="审核用户"-->
+      <!--res_model="res.users"-->
+	  <!--view_mode="tree,form"-->
+	<!--/>-->
+    <record id="action_check_user" model="ir.actions.act_window">
+        <field name="name">Units of Measure</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.users</field>
+        <field name="view_type">form</field>
+        <field name="view_id" ref="list_check_user"/>
+    </record>
+    <!-- Menu -->
+    <menuitem id="menu_hrmall"
+              name="HR商城"
+              sequence="100"
+    />
+    <menuitem id="menu_check"
+              name="审核"
+              sequence="10"
+              parent="menu_hrmall"
+    />
+    <menuitem id="menu_check"
+              name="订单"
+              sequence="10"
+              parent="menu_hrmall"
+    />
+    <menuitem id="menu_check_user"
+              name="审核用户"
+              action="action_check_user"
+              parent="menu_check"
+              sequence="10"
+    />
+</odoo>

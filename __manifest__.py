@@ -10,7 +10,7 @@
         Long description of module's purpose
     """,
 
-    'author': "My Company",
+    'author': "Team4",
     'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
@@ -20,13 +20,16 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','website', 'sale', 'website_payment', 'website_mail', 'website_form', 'website_rating', 'digest'],
+    'depends': ['base', 'website', 'sale', 'website_payment', 'website_mail', 'website_form', 'website_rating', 'digest'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
+        'views/check.xml',
+        'views/menu.xml',
+        'views/sale_order_views.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

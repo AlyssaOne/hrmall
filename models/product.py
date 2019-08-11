@@ -17,8 +17,6 @@ class ProductStyle(models.Model):
 class ProductPricelist(models.Model):
     _inherit = "product.pricelist"
 
-    salesteam_idzxy = fields.Many2one('crm.team', string='Sales Teamzxy')
-
     def _default_website(self):
         """ Find the first company's website, if there is one. """
         company_id = self.env.user.company_id.id
