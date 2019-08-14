@@ -27,8 +27,8 @@
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
-        'views/register_menu.xml',
-        'views/register.xml',
+        'views/hr_register_menu.xml',
+        'views/hr_register.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

@@ -3,7 +3,7 @@
 
 from odoo import http
 
-from ..models.models import register
+from ..models.models import hrregister
 class HrRegister(http.Controller):
     @http.route('/user/register/', auth='public', type="http", website=True)
     def index(self, **kw):
@@ -14,7 +14,7 @@ class HrRegister(http.Controller):
         values = {}
         for field_name, field_value in kw.items():
             values[field_name] = field_value
-        http.request.env['hrmall.register'].sudo().create({'name':values['name'],'email':values['email'],'password':values['password']})
+        http.request.env['hrmall.hrregister'].sudo().create({'name':values['name'],'email':values['email'],'password':values['password']})
         return http.request.render("hrmall.login")
 
 
