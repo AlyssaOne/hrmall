@@ -3,7 +3,7 @@
 
 from odoo import http
 
-from ..models.models import hrregister
+from ..models.hr_register import hrregister
 class HrRegister(http.Controller):
     @http.route('/user/register/', auth='public', type="http", website=True)
     def index(self, **kw):
