@@ -3,7 +3,6 @@
 from odoo import models, fields, api
 
 class register(models.Model):
-     _inherit = 'res.users'
      _name = 'register.register'
 
      name = fields.Char(string=u'用户名', required=True)
