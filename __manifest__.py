@@ -2,7 +2,7 @@
 {
     'name': "register",
 
-    'summary': """lalala""",
+    'summary': """la""",
 
     'description': """
         Long description of module's purpose
