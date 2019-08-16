@@ -10,17 +10,8 @@
                         <form t-attf-class="s_website_form container-fluid form-horizontal" role="form" t-attf-action="/login{{ '?debug' if debug else '' }}" method="post">
     <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
 
-   <!-- <div class="form-group field-db" t-if="databases and len(databases) &gt; 1">
-        <label for="db" class="col-form-label">Database</label>
-        <div t-attf-class="input-group {{'input-group-sm' if form_small else ''}}">
-            <input type="text" name="db" t-att-value="request.db" id="db" t-attf-class="form-control #{'form-control-sm' if form_small else ''}" required="required" readonly="readonly"/>
-            <span class="input-group-append">
-                <a role="button" href="/web/database/selector" class="btn btn-secondary">Select <i class="fa fa-database" role="img" aria-label="Database" title="Database"></i></a>
-            </span>
-        </div>
-    </div>-->
 
-                      <div class="col-title-block">
+                        <div class="col-title-block">
                     <p>
                     <h1>hr 注册</h1>
                    </p>
@@ -28,26 +19,58 @@
                     <div class="col-center-block">
                     <p>
                     <div class="form-group form">
-                        <label for="name">用户名</label>
-                        <input type="text" name="name" size="40" required="True" class="o_website_form_input form-control"/>
+                        <label for="user_name">user_name</label>
+                        <input type="text" name="user_name" size="40" required="True" class="o_website_form_input form-control"/>
                     </div>
                     </p>
                     <p>
                     <div class="form-group">
-                        <label for="email">电子邮箱</label>
-                        <input type="text" name="email" size="40" required="True" class="o_website_form_input form-control"/>
+                        <label for="email">email</label>
+                        <input type="text" name="email" size="40" class="o_website_form_input form-control"/>
                     </div>
                     </p>
-
                     <div class="form-group">
+                    <p>
+                        <label for="pwd">password<br/>
+                            <input id="pwd" class="o_website_form_input input form-control" type="password" size="70" required="True" name="pwd"/>
+                        </label>
+                    </p>
+    	            </div>
+                        <div class="form-group">
+                            <p>
+                                <label for="hr_name">HrName</label>
+                                <input id="hr_name" name="hr_name" class="o_website_form_input input form-control" type="text" size="40"/>
+                            </p>
+                            <p>
+                                <label for="card_num">cardNumber</label>
+                                <input id="card_num" name="card_num" class="o_website_form_input input form-control" type="text" size="40"/>
+                            </p>
+                            <p>
+                                <label for="tel">Tel</label>
+                                <input id="tel" name="tel" class="o_website_form_input input form-control" type="text" size="40"/>
+                            </p>
+                            <p>
+                                <label for="gender">Gender</label>
+<select name="gender" class="o_website_form_input input form-control">
+  <option value ="m">Man</option>
+  <option value ="w">Woman</option>
+</select>
+</p>
+                            <p>
+                                <label for="birth">Birthday</label>
+                                <input id="birth" name="birth" class="o_website_form_input input form-control" type="date" size="40"/>
+                            </p>
+                            <p>
+                                <label for="address">Address</label>
+                                <input id="addr" name="addr" class="o_website_form_input input form-control" type="text" size="40"/>
+                            </p>
+                             <p>
+                                <label for="image">image</label>
+                                <input id="image" name="image"  type="file" size="40"/>
+                            </p>
+                        </div>
+    	            </div>
 
-    <p>
-    	<label for="user_pwd1">密码<br/>
-    		<input id="password" class="o_website_form_input input form-control" type="password" size="70" required="True" name="password"/>
-    	</label>
-    </p>
-    	</div>
-    	</div>
 
 
                     <div t-attf-class="col-title-block clearfix oe_login_buttons text-center mb-1 {{'pt-2' if form_small else 'pt-3'}}">

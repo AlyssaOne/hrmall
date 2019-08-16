@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <odoo>
-    <act_window id="action_register" name="HR Register" res_model="hrmall.hrregister" view_mode="tree,form"/>
+    <act_window id="action_register" name="HR Register" res_model="hrmall.hr" view_mode="tree,form"/>
            <menuitem name="HR Register" id="register_menu_root" action="action_register"/>
         <menuitem name="HR" id="register_menu_1" parent="register_menu_root"/>
 </odoo>

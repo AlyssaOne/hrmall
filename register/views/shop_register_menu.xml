@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-
-<odoo>
-    <act_window id="action_register" name="Shop Register" res_model="shop.register" view_mode="tree,form"/>
-           <menuitem name="Shop Register" id="register_menu_root" action="action_register"/>
-        <menuitem name="Shop" id="register_menu_1" parent="register_menu_root"/>
-</odoo>

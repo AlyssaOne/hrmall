@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "register",
+    'name': "hr_register",
 
     'summary': """la""",
 
@@ -20,7 +20,8 @@
     # any module necessary for this one to work correctly
     'depends': ['base',
                 'website_form',
-                'web'],
+                'web',
+              ],
 
     # always loaded
     'data': [
