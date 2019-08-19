@@ -3,7 +3,7 @@
     <data>
         <record model="ir.actions.act_window" id="register_action_window">
             <field name="name">hr register</field>
-            <field name="res_model">hrmall.hr</field>
+            <field name="res_model">res.users</field>
             <field name="view_mode">tree,form</field>
         </record>
 

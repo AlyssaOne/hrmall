@@ -5,8 +5,9 @@ from odoo import models, fields, api
 
 class HrmallOrder(models.Model):
     _name = 'hrmall.order'
+    _rec_name = 'order_num'
 
-    user_name = fields.Many2one('hrmall.user', string='UserName', required=True)
+    user_name = fields.Many2one('res.users', string='UserName', required=True)
     product_name = fields.Many2one('hrmall.product', string='ProductName', required=True)
     company_name = fields.Many2one('hrmall.company', string='CompanyName')
 

@@ -2,8 +2,8 @@
 
 import datetime
 from odoo import http
-from ..models.hrmall_hr import  HrmallHr
-from ..models.hrmall_user import HrmallUser
+from ..models.res_users  import Users
+
 class HrRegister(http.Controller):
     @http.route('/user/register/', auth='public', type="http", website=True)
     def index(self, **kw):
@@ -16,9 +16,12 @@ class HrRegister(http.Controller):
             values[field_name] = field_value
 
         cur = datetime.datetime.now()
-        http.request.env['hrmall.user'].sudo().create({'user_name':values['user_name'],'pwd':values['pwd'],'user_type':1,'status':0})
-        username = http.request.env['hrmall.user'].search([('user_name','=',values['user_name'])])
-        http.request.env['hrmall.hr'].sudo().create({'hr_name':values['hr_name'],'user_name':username.id,'card_num':values['card_num'],
-                                                     'tel':values['tel'],'gender':values['gender'],'register_time':cur,'birth':values['birth'],
-                                                     'email':values['email'],'addr':values['addr'],'image':values['image']})
+        #http.request.env['res.users'].sudo().create({'user_name':values['user_name'],'pwd':values['pwd'],'user_type':1,'status':0})
+        #username = http.request.env['res.users'].search([('user_name','=',values['user_name'])])
+        http.request.env['res.partner'].sudo().create({'name':values['name'],'active':'false','email':values['email']})
+        partner = http.request.env['res.partner'].search([('name','=',values['name'])])
+        http.request.env['res.users'].sudo().create({'login':values['email'],'password':values['password'],'active':['false'],
+                                                    'company_id':1,'partner_id':partner.id,'notification_type':'email','odoobot_state':'not_initialized'})
+                                              #      'tel':values['tel'],'gender':values['gender'],'register_time':cur,'birth':values['birth'],
+                                               #      'email':values['email'],'addr':values['addr']})
         return http.request.render("hrmall.login")
