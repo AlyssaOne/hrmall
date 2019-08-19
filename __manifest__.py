@@ -30,6 +30,8 @@
         'views/templates.xml',
         'views/hr_register_menu.xml',
         'views/hr_register.xml',
+        'views/company_register_menu.xml',
+        'views/company_register.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

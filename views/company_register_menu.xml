@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<odoo>
+    <act_window id="action_register" name="Company Register" res_model="hrmall.company" view_mode="tree,form"/>
+           <menuitem name="Company Register" id="register_menu_root" action="action_register"/>
+        <menuitem name="Company" id="register_menu_1" parent="register_menu_root"/>
+</odoo>

@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_res_users,res.users,model_res_users,,1,1,1,0
+access_hrmall_company,hrmall.company,model_hrmall_company,,1,1,1,0
